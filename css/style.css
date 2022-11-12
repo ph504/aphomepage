@@ -127,6 +127,7 @@ li{
 	text-decoration: none;
 	transition-duration: 0.9s;
 	text-align: center;
+	cursor: default;
 }
 
 .curve {
