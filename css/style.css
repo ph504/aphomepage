@@ -53,15 +53,18 @@ body{
 }
 
 .nav-container {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
+	overflow-y: auto;
+	max-height: 100vh;
+	height: 100vh;
 }
 
 .nav {
 	background-image: linear-gradient(white, #555555);
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	overflow: visible;
@@ -71,9 +74,22 @@ body{
 	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 10px;
+	padding-bottom: 10px;
 	padding-left: 0px;
 	background-color: azure;
-	overflow: hidden;
+	/* height: 100vh; */
+}
+
+.nav-container::-webkit-scrollbar {
+    opacity: 0;
+}
+ 
+.nav-container::-webkit-scrollbar-track {
+    opacity: 0;
+}
+ 
+.nav-container::-webkit-scrollbar-thumb {
+  	opacity: 0;
 }
 
 ul{
@@ -113,7 +129,10 @@ li{
 
 .aitem {
 	transition: all 2s ease;
-	background-image: linear-gradient(white, #555555);
+	background-image: linear-gradient(#aaa, #aaa);
+	border: black;
+	border-style: solid;
+	border-width: 5px;
 	display: block;
 	width: 15em;
 	height: 2em;
